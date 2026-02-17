@@ -250,7 +250,7 @@ font-size:26px;
 <section class="cta">
 <h2>Tem dúvidas sobre seu clareamento?</h2>
 <p>Entre em contato com nossa equipe e receba orientação personalizada.</p>
-<button onclick="alert('Adicionar link do WhatsApp aqui')">
+<button onclick="https://wa.me/5561992427214">
 Falar com a Clínica
 </button>
 </section>
@@ -285,4 +285,5 @@ observer.observe(card);
 
 </body>
 </html>
+
 
