@@ -3,35 +3,71 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pós Clareamento Dental | Marcella Caetano</title>
+<title>Marcella Caetano — Clínica Estética</title>
+
 <script src="https://cdn.tailwindcss.com"></script>
+
 <script>
 tailwind.config = {
-  theme:{
-    extend:{
-      colors:{
-        off:'#F8F6F2',
-        offsoft:'#EFEAE2',
-        gold:'#C6A96B',
-        goldsoft:'#E6D3A3',
-        goldhover:'#B89652',
-        textlux:'#2F2A24',
-        footerdark:'#14110D'
-      },
-      fontFamily:{
-        lux:['Inter','ui-sans-serif','system-ui']
-      }
-    }
-  }
+theme:{
+extend:{
+colors:{
+off:'#F8F6F2',
+offsoft:'#EFEAE2',
+gold:'#C6A96B',
+goldsoft:'#E6D3A3',
+goldhover:'#B89652',
+textlux:'#2F2A24',
+footerdark:'#14110D'
+},
+fontFamily:{
+lux:['Inter','ui-sans-serif','system-ui']
+}
+}
+}
 }
 </script>
+
 <style>
-body {
-  background: radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 40%),
-              radial-gradient(circle at 90% 90%, #EFEAE2 0%, transparent 45%),
-              linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
-  color:#2F2A24;
-  scroll-behavior: smooth;
+
+/* FUNDO */
+body{
+background:
+radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 40%),
+radial-gradient(circle at 90% 90%, #EFEAE2 0%, transparent 45%),
+linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
+color:#2F2A24;
+}
+
+/* HEADER */
+header{
+backdrop-filter: blur(20px);
+background: rgba(248,246,242,0.72);
+border-bottom:1px solid rgba(198,169,107,0.12);
+}
+
+/* TEXTO GOLD */
+.text-gold{
+background: linear-gradient(90deg,#C6A96B,#E6D3A3);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* BOTÃO */
+.btn-brand{
+background: linear-gradient(135deg,#C6A96B,#E6D3A3);
+color:white;
+box-shadow:0 18px 45px rgba(198,169,107,0.35);
+transition:.45s cubic-bezier(.22,.61,.36,1);
+}
+.btn-brand:hover{
+transform:translateY(-4px);
+box-shadow:0 28px 65px rgba(198,169,107,0.45);
+}
+
+/* HERO FLAGSHIP */
+.hero-bg{
+background:url('assets/caparosto26.jpg') center right / cover no-repeat;
 }
 
 /* Header minimalista com glass leve */
@@ -227,6 +263,7 @@ animateElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+
 
 
 
