@@ -1,290 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pós Clareamento Dental</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pós Clareamento Dental | Marcella Caetano</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+theme:{
+extend:{
+colors:{
+off:'#F8F6F2',
+offsoft:'#EFEAE2',
+gold:'#C6A96B',
+goldsoft:'#E6D3A3',
+goldhover:'#B89652',
+textlux:'#2F2A24',
+footerdark:'#14110D'
+},
+fontFamily:{
+lux:['Inter','ui-sans-serif','system-ui']
+}
+}
+}
+}
+</script>
 
 <style>
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-/* BODY */
+/* FUNDO PREMIUM */
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-background:#f6f4ef;
-color:#1c1c1c;
+background:
+radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 40%),
+radial-gradient(circle at 90% 90%, #EFEAE2 0%, transparent 45%),
+linear-gradient(180deg,#F8F6F2 0%, #EFEAE2 100%);
+color:#2F2A24;
 }
 
 /* HEADER */
-.header{
-background:#f6f4ef;
-padding:20px;
-text-align:center;
-border-bottom:1px solid rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:10;
-backdrop-filter: blur(10px);
+header{
+backdrop-filter: blur(20px);
+background: rgba(248,246,242,0.72);
+border-bottom:1px solid rgba(198,169,107,0.12);
 }
 
-.logo{
-height:60px;
+/* TEXTO GOLD */
+.text-gold{
+background: linear-gradient(90deg,#C6A96B,#E6D3A3);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-/* HERO */
-.hero{
-position:relative;
-}
-
-.hero img{
-width:100%;
-height:65vh;
-object-fit:cover;
-}
-
-.hero-overlay{
-position:absolute;
-bottom:40px;
-left:50%;
-transform:translateX(-50%);
-background:rgba(255,255,255,0.88);
-padding:35px;
-border-radius:22px;
-text-align:center;
-backdrop-filter:blur(12px);
-box-shadow:0 20px 60px rgba(0,0,0,0.15);
-}
-
-.hero-overlay h1{
-margin:0;
-color:#c6a86b;
-font-size:36px;
-margin-bottom:10px;
-}
-
-.hero-overlay p{
-color:#444;
-font-size:18px;
-}
-
-/* CONTEUDO */
-.conteudo{
-padding:70px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:35px;
-max-width:1200px;
-margin:auto;
-}
-
-/* CARD */
-.card{
-background:white;
-border-radius:24px;
-overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 30px 70px rgba(0,0,0,0.12);
-}
-
-.card img{
-width:100%;
-height:240px;
-object-fit:cover;
-}
-
-.card h2{
-color:#c6a86b;
-padding:25px 25px 10px;
-font-size:22px;
-}
-
-.card ul{
-padding:0 35px 30px;
-}
-
-.card li{
-margin-bottom:10px;
-font-size:15px;
-}
-
-/* CTA */
-.cta{
-margin:80px auto;
-max-width:900px;
-background:linear-gradient(120deg,#c6a86b,#e3d2a2);
-padding:60px 30px;
-border-radius:30px;
-text-align:center;
+/* BOTÃO */
+.btn-brand{
+background: linear-gradient(135deg,#C6A96B,#E6D3A3);
 color:white;
-box-shadow:0 25px 70px rgba(0,0,0,0.18);
+box-shadow:0 18px 45px rgba(198,169,107,0.35);
+transition:.45s cubic-bezier(.22,.61,.36,1);
+}
+.btn-brand:hover{
+transform:translateY(-4px);
+box-shadow:0 28px 65px rgba(198,169,107,0.45);
 }
 
-.cta h2{
-font-size:32px;
-margin-bottom:15px;
+/* HERO BG */
+.hero-bg{
+background:url('images/hero.jpg') center right / cover no-repeat;
 }
 
-.cta p{
-font-size:18px;
-margin-bottom:25px;
+/* HERO OVERLAY */
+.hero-light{
+background:
+linear-gradient(90deg,
+rgba(248,246,242,0.98) 0%,
+rgba(248,246,242,0.92) 30%,
+rgba(248,246,242,0.70) 50%,
+rgba(248,246,242,0.30) 70%,
+transparent 100%);
 }
 
-.cta button{
-background:white;
-color:#c6a86b;
-border:none;
-padding:18px 40px;
-border-radius:50px;
-font-weight:600;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
+/* CARDS */
+.card-brand{
+background: rgba(255,255,255,0.7);
+backdrop-filter: blur(14px);
+border:1px solid rgba(198,169,107,0.18);
+box-shadow:0 25px 55px rgba(0,0,0,0.07);
+transition:.5s cubic-bezier(.22,.61,.36,1);
 }
-
-.cta button:hover{
-transform:scale(1.05);
+.card-brand:hover{
+transform:translateY(-10px);
+box-shadow:0 35px 75px rgba(0,0,0,0.15);
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:50px 20px;
-color:#c6a86b;
-font-weight:500;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero img{
-height:55vh;
-}
-
-.hero-overlay{
-width:90%;
-padding:25px;
-}
-
-.hero-overlay h1{
-font-size:26px;
-}
-
+background: linear-gradient(180deg,#14110D,#0A0806);
 }
 
 </style>
 </head>
 
-<body>
+<body class="font-lux">
 
-<header class="header">
-<img src="images/logo.jpg" class="logo">
+<!-- HEADER -->
+<header class="sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+<div class="flex items-center gap-3">
+<img src="images/logo.jpg" class="h-10">
+<span class="font-semibold tracking-wide">Marcella Caetano</span>
+</div>
+
+<a href="https://wa.me/5561992427214"
+class="btn-brand px-6 py-2 rounded-xl text-sm">
+Falar com a Clínica
+</a>
+
+</div>
 </header>
 
-<section class="hero">
-<img src="images/hero.jpg">
-<div class="hero-overlay">
-<h1>Pós Clareamento Dental</h1>
-<p>Cuidados essenciais para manter seu sorriso branco e saudável</p>
+<!-- HERO -->
+<section class="hero-bg relative min-h-[100svh] flex items-center overflow-hidden">
+
+<div class="absolute inset-0 hero-light"></div>
+
+<div class="relative max-w-7xl mx-auto px-6 py-28 w-full flex items-center">
+
+<div class="max-w-xl">
+
+<h1 class="text-5xl md:text-6xl font-semibold leading-tight tracking-tight mb-6">
+Pós Clareamento
+<span class="text-gold block mt-3">Dental</span>
+</h1>
+
+<p class="text-lg leading-relaxed text-textlux/90 mb-10 max-w-lg">
+Cuidados essenciais para manter seu sorriso branco, saudável e duradouro.
+</p>
+
+<a href="https://wa.me/5561992427214"
+class="btn-brand px-10 py-5 rounded-2xl inline-block text-lg">
+Tirar Dúvidas Agora
+</a>
+
+</div>
 </div>
 </section>
 
-<section class="conteudo">
+<!-- GUIA DE CUIDADOS -->
+<section class="py-28">
+<div class="max-w-7xl mx-auto px-6">
 
-<div class="card">
-<img src="images/moldeira.jpg">
-<h2>🪥 Como Usar</h2>
-<ul>
+<h2 class="text-4xl font-semibold mb-14 tracking-tight">
+Guia Pós Clareamento
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+<!-- COMO USAR -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="images/moldeira.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-4">🪥 Como Usar</h3>
+<ul class="text-sm space-y-2 text-textlux/80">
 <li>Escove os dentes antes do uso</li>
 <li>Aplique pequena quantidade de gel</li>
 <li>Encaixe a moldeira com cuidado</li>
 <li>Retire excesso de gel</li>
 </ul>
 </div>
+</div>
 
-<div class="card">
-<img src="images/moldeira.jpg">
-<h2>⏰ Tempo de Uso</h2>
-<ul>
+<!-- TEMPO -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="images/moldeira.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-4">⏰ Tempo de Uso</h3>
+<ul class="text-sm space-y-2 text-textlux/80">
 <li>1 vez ao dia</li>
 <li>Até 3 horas</li>
 <li>Preferencialmente à noite</li>
 <li>Não dormir com moldeira</li>
 </ul>
 </div>
+</div>
 
-<div class="card">
-<img src="images/cafe.jpg">
-<h2>🚫 Evite Durante Tratamento</h2>
-<ul>
+<!-- EVITAR -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="images/cafe.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-4">🚫 Evite Durante Tratamento</h3>
+<ul class="text-sm space-y-2 text-textlux/80">
 <li>Café, vinho e refrigerantes escuros</li>
 <li>Açaí e molho de tomate</li>
 <li>Cigarro</li>
 <li>Se consumir, enxaguar a boca</li>
 </ul>
 </div>
+</div>
 
-<div class="card">
-<img src="images/resultado.jpg">
-<h2>💙 Resultado</h2>
-<ul>
+<!-- RESULTADO -->
+<div class="card-brand rounded-3xl overflow-hidden">
+<img src="images/resultado.jpg" class="w-full h-64 object-cover">
+<div class="p-7">
+<h3 class="text-xl font-semibold mb-4">💙 Resultado</h3>
+<ul class="text-sm space-y-2 text-textlux/80">
 <li>Clareamento gradual</li>
 <li>Resultado depende dos hábitos</li>
 <li>Sensibilidade pode ocorrer</li>
 <li>Se incomodar, pausar 1–2 dias</li>
 </ul>
 </div>
+</div>
 
+</div>
+</div>
 </section>
 
-<section class="cta">
-<h2>Tem dúvidas sobre seu clareamento?</h2>
-<p>Entre em contato com nossa equipe e receba orientação personalizada.</p>
-<button onclick="https://wa.me/5561992427214">
+<!-- CTA -->
+<section class="py-28 text-center">
+<h2 class="text-3xl font-semibold mb-10">
+Tem dúvidas sobre seu clareamento?
+</h2>
+
+<a href="https://wa.me/5561992427214"
+class="btn-brand px-12 py-5 rounded-full text-lg">
 Falar com a Clínica
-</button>
+</a>
 </section>
 
-<footer>
-© Marcella Caetano Odontologia
+<!-- FOOTER -->
+<footer class="text-white py-12 text-center text-sm tracking-wide">
+© <span id="year"></span> Marcella Caetano — Todos os direitos reservados.
 </footer>
 
 <script>
-
-/* ANIMAÇÃO ENTRADA DOS CARDS */
-
-const cards = document.querySelectorAll(".card");
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.opacity = 1;
-entry.target.style.transform = "translateY(0)";
-}
-});
-});
-
-cards.forEach(card=>{
-card.style.opacity = 0;
-card.style.transform = "translateY(40px)";
-card.style.transition = "all 0.8s ease";
-observer.observe(card);
-});
-
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
+
 
 
 
