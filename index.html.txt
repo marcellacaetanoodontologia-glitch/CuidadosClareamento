@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pós Clareamento Dental</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+background:#f6f4ef;
+color:#1c1c1c;
+}
+
+/* HEADER */
+.header{
+background:#f6f4ef;
+padding:20px;
+text-align:center;
+border-bottom:1px solid rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:10;
+backdrop-filter: blur(10px);
+}
+
+.logo{
+height:60px;
+}
+
+/* HERO */
+.hero{
+position:relative;
+}
+
+.hero img{
+width:100%;
+height:65vh;
+object-fit:cover;
+}
+
+.hero-overlay{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(255,255,255,0.88);
+padding:35px;
+border-radius:22px;
+text-align:center;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+.hero-overlay h1{
+margin:0;
+color:#c6a86b;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.hero-overlay p{
+color:#444;
+font-size:18px;
+}
+
+/* CONTEUDO */
+.conteudo{
+padding:70px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+max-width:1200px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+background:white;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 30px 70px rgba(0,0,0,0.12);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.card h2{
+color:#c6a86b;
+padding:25px 25px 10px;
+font-size:22px;
+}
+
+.card ul{
+padding:0 35px 30px;
+}
+
+.card li{
+margin-bottom:10px;
+font-size:15px;
+}
+
+/* CTA */
+.cta{
+margin:80px auto;
+max-width:900px;
+background:linear-gradient(120deg,#c6a86b,#e3d2a2);
+padding:60px 30px;
+border-radius:30px;
+text-align:center;
+color:white;
+box-shadow:0 25px 70px rgba(0,0,0,0.18);
+}
+
+.cta h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.cta p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.cta button{
+background:white;
+color:#c6a86b;
+border:none;
+padding:18px 40px;
+border-radius:50px;
+font-weight:600;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.cta button:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:50px 20px;
+color:#c6a86b;
+font-weight:500;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero img{
+height:55vh;
+}
+
+.hero-overlay{
+width:90%;
+padding:25px;
+}
+
+.hero-overlay h1{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<img src="images/logo.png" class="logo">
+</header>
+
+<section class="hero">
+<img src="images/hero.webp">
+<div class="hero-overlay">
+<h1>Pós Clareamento Dental</h1>
+<p>Cuidados essenciais para manter seu sorriso branco e saudável</p>
+</div>
+</section>
+
+<section class="conteudo">
+
+<div class="card">
+<img src="images/clareamento.webp">
+<h2>🪥 Como Usar</h2>
+<ul>
+<li>Escove os dentes antes do uso</li>
+<li>Aplique pequena quantidade de gel</li>
+<li>Encaixe a moldeira com cuidado</li>
+<li>Retire excesso de gel</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="images/moldeira.webp">
+<h2>⏰ Tempo de Uso</h2>
+<ul>
+<li>1 vez ao dia</li>
+<li>Até 3 horas</li>
+<li>Preferencialmente à noite</li>
+<li>Não dormir com moldeira</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="images/cuidados.webp">
+<h2>🚫 Evite Durante Tratamento</h2>
+<ul>
+<li>Café, vinho e refrigerantes escuros</li>
+<li>Açaí e molho de tomate</li>
+<li>Cigarro</li>
+<li>Se consumir, enxaguar a boca</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="images/resultado.webp">
+<h2>💙 Resultado</h2>
+<ul>
+<li>Clareamento gradual</li>
+<li>Resultado depende dos hábitos</li>
+<li>Sensibilidade pode ocorrer</li>
+<li>Se incomodar, pausar 1–2 dias</li>
+</ul>
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Tem dúvidas sobre seu clareamento?</h2>
+<p>Entre em contato com nossa equipe e receba orientação personalizada.</p>
+<button onclick="alert('Adicionar link do WhatsApp aqui')">
+Falar com a Clínica
+</button>
+</section>
+
+<footer>
+© Marcella Caetano Odontologia
+</footer>
+
+<script>
+
+/* ANIMAÇÃO ENTRADA DOS CARDS */
+
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity = 1;
+entry.target.style.transform = "translateY(0)";
+}
+});
+});
+
+cards.forEach(card=>{
+card.style.opacity = 0;
+card.style.transform = "translateY(40px)";
+card.style.transition = "all 0.8s ease";
+observer.observe(card);
+});
+
+</script>
+
+</body>
+</html>
