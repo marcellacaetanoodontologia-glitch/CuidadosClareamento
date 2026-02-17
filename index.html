@@ -34,10 +34,10 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header minimalista sem botão */
+/* Header minimalista com glass leve */
 header {
-  backdrop-filter: blur(20px);
-  background: rgba(248,246,242,0.85);
+  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.85);
   border-bottom:1px solid rgba(198,169,107,0.18);
 }
 
@@ -119,16 +119,17 @@ footer{
 </head>
 <body class="font-lux">
 
+<!-- Header com logo PNG -->
 <header class="sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex justify-start items-center px-5 py-2">
     <div class="flex items-center gap-3">
-      <!-- Logo agora aceita png, jpg ou webp -->
       <img src="images/logo.png" class="h-9" alt="Logo Marcella Caetano">
       <span class="font-semibold tracking-wide text-sm">Marcella Caetano</span>
     </div>
   </div>
 </header>
 
+<!-- Hero -->
 <section class="hero-bg relative min-h-[75svh] flex items-center">
   <div class="hero-layer"></div>
   <div class="relative max-w-7xl mx-auto px-5 py-16 w-full flex items-center hero-content">
@@ -143,6 +144,7 @@ footer{
   </div>
 </section>
 
+<!-- Cards -->
 <section class="py-6 cards-container">
   <div class="max-w-7xl mx-auto px-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
     <div class="card-brand rounded-2xl overflow-hidden" data-animate>
@@ -196,11 +198,13 @@ footer{
   </div>
 </section>
 
+<!-- CTA -->
 <section class="py-12 text-center" data-animate>
   <h2 class="text-xl md:text-2xl font-semibold mb-4">Tem dúvidas sobre seu clareamento?</h2>
   <a href="https://wa.me/5561992427214" class="btn-brand px-8 py-3 rounded-full text-base">Falar com a Clínica</a>
 </section>
 
+<!-- Footer -->
 <footer class="text-white py-6 text-center text-xs tracking-wide">
   © <span id="year"></span> Marcella Caetano — Todos os direitos reservados.
 </footer>
@@ -208,7 +212,7 @@ footer{
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Scroll animation simples
+// Scroll reveal simples
 const animateElements = document.querySelectorAll('[data-animate]');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -223,6 +227,8 @@ animateElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+
+
 
 
 
