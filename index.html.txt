@@ -188,7 +188,7 @@ font-size:26px;
 <body>
 
 <header class="header">
-<img src="images/logo.png" class="logo">
+<img src="images/logo.jpg" class="logo">
 </header>
 
 <section class="hero">
@@ -202,7 +202,7 @@ font-size:26px;
 <section class="conteudo">
 
 <div class="card">
-<img src="images/clareamento.webp">
+<img src="images/aplicação.jpg">
 <h2>🪥 Como Usar</h2>
 <ul>
 <li>Escove os dentes antes do uso</li>
@@ -224,7 +224,7 @@ font-size:26px;
 </div>
 
 <div class="card">
-<img src="images/cuidados.webp">
+<img src="images/cafe.jpg">
 <h2>🚫 Evite Durante Tratamento</h2>
 <ul>
 <li>Café, vinho e refrigerantes escuros</li>
@@ -235,7 +235,7 @@ font-size:26px;
 </div>
 
 <div class="card">
-<img src="images/resultado.webp">
+<img src="images/resultado.jpg">
 <h2>💙 Resultado</h2>
 <ul>
 <li>Clareamento gradual</li>
@@ -285,3 +285,4 @@ observer.observe(card);
 
 </body>
 </html>
+
